@@ -40,6 +40,30 @@ MonoBehaviour:
     m_Localized: Menu
     m_Metadata:
       m_Items: []
+  - m_Id: 26616904181587968
+    m_Localized: New Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26616938616823808
+    m_Localized: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26628751945342976
+    m_Localized: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26631539278454784
+    m_Localized: Are you sure you want to exit?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26631639350353920
+    m_Localized: Yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26631686293004288
+    m_Localized: No
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

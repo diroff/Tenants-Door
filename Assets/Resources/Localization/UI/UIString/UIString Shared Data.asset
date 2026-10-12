@@ -35,6 +35,30 @@ MonoBehaviour:
     m_Key: ui.gameplay.labels.menu
     m_Metadata:
       m_Items: []
+  - m_Id: 26616904181587968
+    m_Key: ui.main_menu.buttons.new_game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26616938616823808
+    m_Key: ui.main_menu.buttons.continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26628751945342976
+    m_Key: ui.main_menu.buttons.back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26631539278454784
+    m_Key: ui.main_menu.labels.exit_confirm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26631639350353920
+    m_Key: ui.main_menu.buttons.yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26631686293004288
+    m_Key: ui.main_menu.buttons.no
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

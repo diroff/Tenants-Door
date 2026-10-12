@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace Abstractions.UI
 {
-    public abstract class UIButtonBase : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
+    public abstract class UIButtonBase : MonoBehaviour
     {
         protected Button Button { get; private set; }
 
@@ -44,11 +44,5 @@ namespace Abstractions.UI
             return UniTask.CompletedTask;
         }
         protected void SetInteractable(bool value) => Button.interactable = value;
-
-        public virtual void OnPointerDown(PointerEventData eventData) { }
-        public virtual void OnPointerUp(PointerEventData eventData) { }
-        public virtual void OnPointerEnter(PointerEventData eventData) { }
-        public virtual void OnPointerExit(PointerEventData eventData) { }
-        public virtual void OnPointerClick(PointerEventData eventData) { }
     }
 }
