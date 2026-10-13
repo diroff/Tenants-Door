@@ -2185,7 +2185,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2777011551315587280, guid: 032e258a12d02aa41a211517e592e827, type: 3}
       propertyPath: m_text
-      value: "\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438"
+      value: Settings
+      objectReference: {fileID: 0}
+    - target: {fileID: 2777011551315587280, guid: 032e258a12d02aa41a211517e592e827, type: 3}
+      propertyPath: m_fontSize
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 3316035218018369351, guid: 032e258a12d02aa41a211517e592e827, type: 3}
       propertyPath: m_Pivot.x
@@ -2615,7 +2619,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2777011551315587280, guid: 032e258a12d02aa41a211517e592e827, type: 3}
       propertyPath: m_text
-      value: "\u0412\u044B\u0445\u043E\u0434"
+      value: Exit
       objectReference: {fileID: 0}
     - target: {fileID: 3316035218018369351, guid: 032e258a12d02aa41a211517e592e827, type: 3}
       propertyPath: m_Pivot.x
@@ -8697,7 +8701,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8127356648467749574, guid: 032e258a12d02aa41a211517e592e827, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1484854882}
+      addedObject: {fileID: 1484854885}
   m_SourcePrefab: {fileID: 100100000, guid: 032e258a12d02aa41a211517e592e827, type: 3}
 --- !u!224 &1484854880 stripped
 RectTransform:
@@ -8709,19 +8713,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8127356648467749574, guid: 032e258a12d02aa41a211517e592e827, type: 3}
   m_PrefabInstance: {fileID: 1484854879}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1484854882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1484854881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18114c3506a4be74ead22b6f235e9459, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UI.MainMenu.UILastLevelLoaderButton
-  _levelName: Level1
 --- !u!114 &1484854883 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2291436308620752970, guid: 032e258a12d02aa41a211517e592e827, type: 3}
@@ -8744,6 +8735,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &1484854885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484854881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e415b09df13d954ca53b9168921955c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.MainMenu.UIStartNewGameButton
+  _levelName: Level1
 --- !u!1 &1527418930
 GameObject:
   m_ObjectHideFlags: 0
@@ -9034,7 +9038,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18114c3506a4be74ead22b6f235e9459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI.MainMenu.UILastLevelLoaderButton
-  _levelName: Level3
 --- !u!1 &1615047933
 GameObject:
   m_ObjectHideFlags: 0

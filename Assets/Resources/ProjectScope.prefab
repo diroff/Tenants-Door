@@ -58,3 +58,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Installers.ProjectInstaller
   _menuSceneName: _MainMenu
+  _audioMixer: {fileID: 24100000, guid: 1b6a3b93e99473846b8d59ec4d58ceb5, type: 2}

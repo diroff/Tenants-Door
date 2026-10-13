@@ -1,9 +1,11 @@
+using Abstractions.Interfaces;
+using Cysharp.Threading.Tasks;
 using Data.Dialogue;
 using System;
 
 namespace Services
 {
-    public class DialogueService
+    public class DialogueService : IService
     {
         public event Action<DialogueNode> OnNodeStarted;
         public event Action OnDialogueStarted;
@@ -15,6 +17,11 @@ namespace Services
 
         private DialogueSO _currentDialogue;
         private int _currentIndex;
+
+        public async UniTask Initialize()
+        {
+            await UniTask.CompletedTask;
+        }
 
         public void StartDialogue(DialogueSO dialogue)
         {

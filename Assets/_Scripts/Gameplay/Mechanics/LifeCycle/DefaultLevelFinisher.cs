@@ -3,6 +3,7 @@ using Abstractions.Mechanics.Lifecycle;
 using Cysharp.Threading.Tasks;
 using Data.Dialogue;
 using Gameplay.Components;
+using Gameplay.Components.Level;
 using Reflex.Attributes;
 using Services;
 using System;
@@ -18,6 +19,7 @@ namespace Gameplay.Infrastructure.Lifecycle.Implementations
 
         [Header("Settings")]
         [SerializeField] private float _endDuration = 1f;
+        [SerializeField] private NextLevelLoader _nextLevelLoader;
 
         [Inject] private readonly DialogueService _dialogueService;
         [Inject] private readonly InputService _inputService;
@@ -69,13 +71,13 @@ namespace Gameplay.Infrastructure.Lifecycle.Implementations
                 await UniTask.WaitUntil(() => _activeTargetDialogue == null, cancellationToken: cancellationToken);
             }
 
-            _inputService?.Disable(); //TODO: fix input by game fsm
+            _inputService?.Disable();
 
             if (_endDuration > 0f)
-                await UniTask.Delay(TimeSpan.FromSeconds(_endDuration),cancellationToken: cancellationToken);
+                await UniTask.Delay(TimeSpan.FromSeconds(_endDuration), cancellationToken: cancellationToken);
 
-            //TODO: Load next scene/end event for other handler
-            Debug.Log("Level completed");
+            if (_nextLevelLoader != null)
+                await _nextLevelLoader.LoadNextStageAsync(cancellationToken);
         }
     }
 }

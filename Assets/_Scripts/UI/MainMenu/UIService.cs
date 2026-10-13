@@ -93,10 +93,10 @@ namespace UI
             _isTransitioning = true;
             EventSystem.current?.SetSelectedGameObject(null);
 
-            UIPanel currentPanel = _history.Pop();
+            var currentPanel = _history.Pop();
             await currentPanel.HideAsync(_cts.Token);
 
-            UIPanel previousPanel = _history.Peek();
+            var previousPanel = _history.Peek();
 
             if (currentPanel.IsPopup)
             {

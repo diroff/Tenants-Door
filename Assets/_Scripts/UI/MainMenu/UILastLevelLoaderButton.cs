@@ -2,23 +2,22 @@ using Cysharp.Threading.Tasks;
 using Reflex.Attributes;
 using Services;
 using System.Threading;
-using System.Threading.Tasks;
-using UnityEngine;
 
 namespace UI.MainMenu
 {
     public class UILastLevelLoaderButton : UIMainMenuButton
     {
-        [SerializeField] private string _levelName; //TODO: add level name getting from saved data
-
         [Inject] private SceneManagerService _sceneManager;
+        [Inject] private SaveLoadService _saveLoadService;
 
         protected override async UniTask OnClickAsync(CancellationToken ct)
         {
             await base.OnClickAsync(ct);
 
             SetInteractable(false);
-            await _sceneManager.LoadSceneAsync(_levelName);
+
+            var levelName = _saveLoadService.Data.Progress.LastReachedLevelName;
+            await _sceneManager.LoadSceneAsync(levelName);
         }
     }
 }

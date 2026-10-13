@@ -84,7 +84,7 @@ namespace UI
 
         private void DeselectAllButtons()
         {
-            if (_cachedSelectables == null) 
+            if (_cachedSelectables == null)
                 return;
 
             BaseEventData eventData = new BaseEventData(EventSystem.current);
@@ -98,9 +98,60 @@ namespace UI
 
         public void FocusFirstSelectable()
         {
-            if (_firstSelected != null && _firstSelected.gameObject.activeInHierarchy)
+            if (_firstSelected != null)
+                Select(_firstSelected);
+            else
+                SelectNextSelectable();
+        }
+
+        public void Select(Selectable selectable)
+        {
+            if (selectable == null || !selectable.IsInteractable() || !selectable.gameObject.activeInHierarchy)
             {
-                _firstSelected.Select();
+                SelectNextSelectable(selectable);
+                return;
+            }
+
+            selectable.Select();
+        }
+
+        protected void SelectNextSelectable(Selectable afterSelectable = null)
+        {
+            if (_cachedSelectables == null || _cachedSelectables.Length == 0)
+                return;
+
+            bool foundStart = (afterSelectable == null);
+
+            foreach (var selectable in _cachedSelectables)
+            {
+                if (selectable == null) continue;
+
+                if (!foundStart)
+                {
+                    if (selectable == afterSelectable)
+                        foundStart = true;
+                    continue;
+                }
+
+                if (selectable.gameObject.activeInHierarchy && selectable.IsInteractable())
+                {
+                    selectable.Select();
+                    return;
+                }
+            }
+
+            foreach (var selectable in _cachedSelectables)
+            {
+                if (selectable == null) continue;
+
+                if (selectable == afterSelectable)
+                    break;
+
+                if (selectable.gameObject.activeInHierarchy && selectable.IsInteractable())
+                {
+                    selectable.Select();
+                    return;
+                }
             }
         }
     }

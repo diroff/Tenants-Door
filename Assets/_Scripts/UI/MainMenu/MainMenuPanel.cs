@@ -1,5 +1,6 @@
 using Cysharp.Threading.Tasks;
 using Reflex.Attributes;
+using Services;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,15 +19,21 @@ namespace UI.MainMenu
         [SerializeField] private UIPanel _exitConfirmationPopup;
 
         [Inject] private UIService _uiService;
+        
+        private SaveLoadService _saveLoadService;
 
-        private void Start()
+        [Inject]
+        private void Initialize(SaveLoadService saveLoadService)
         {
-            Initialize(true);
-        }
+            _saveLoadService = saveLoadService;
 
-        public void Initialize(bool hasSaveData)
-        {
+            bool hasSaveData = _saveLoadService.HasProgress;
             _continueButton.interactable = hasSaveData;
+
+            if (hasSaveData)
+                Select(_continueButton);
+            else
+                Select(_newGameButton);
 
             _settingsButton.onClick.AddListener(OnSettingsClicked);
             _exitButton.onClick.AddListener(OnExitClicked);
