@@ -292,10 +292,11 @@ GameObject:
   - component: {fileID: 6971149329930224992}
   - component: {fileID: 7985504804255062345}
   - component: {fileID: 7645533707074430656}
-  - component: {fileID: 7488725112060919914}
-  - component: {fileID: 5039583810325252318}
+  - component: {fileID: 6773167019533907938}
+  - component: {fileID: 4367685507708377738}
+  - component: {fileID: 5295354926236432699}
   m_Layer: 5
-  m_Name: UIMenuButton
+  m_Name: UIMenuExitHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -359,7 +360,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7488725112060919914
+--- !u!114 &6773167019533907938
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -368,42 +369,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4866842220211524535}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 7dfe7129c34178543bb6b03d6c6d2d12, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 7645533707074430656}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &5039583810325252318
+  m_EditorClassIdentifier: Assembly-CSharp::Gameplay.Components.Handlers.ReturnToMenuHandler
+  _holdDetector: {fileID: 4367685507708377738}
+  _canvasGroup: {fileID: 5295354926236432699}
+--- !u!114 &4367685507708377738
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -412,9 +383,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 4866842220211524535}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10652db02dcf62d429c2888bf8bd4654, type: 3}
+  m_Script: {fileID: 11500000, guid: b64cfc48fd4b5f2488deb109333536e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UI.Gameplay.UIMenuLoaderButton
+  m_EditorClassIdentifier: Assembly-CSharp::Gameplay.Components.Input.HoldInputDetector
+  _inputActionReference: {fileID: 7844633288967007910, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  _requiredHoldTime: 1.5
+--- !u!225 &5295354926236432699
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4866842220211524535}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &6560242600867999777
 GameObject:
   m_ObjectHideFlags: 0

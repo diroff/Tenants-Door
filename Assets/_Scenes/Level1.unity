@@ -2379,7 +2379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Gameplay.Components.Interaction.InteractableComponent
   _isInteractable: 1
-  _oneShot: 0
+  _oneShot: 1
   _interactionEntry:
     m_TableReference:
       m_TableCollectionName: GUID:be5a02b0a15989f4f8305fa29db8891c
@@ -2574,7 +2574,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 135485327}
-  - {fileID: 1604615738}
   m_Father: {fileID: 603634901}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &388446211
@@ -2683,7 +2682,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Gameplay.Components.Interaction.InteractableComponent
   _isInteractable: 1
-  _oneShot: 0
+  _oneShot: 1
   _interactionEntry:
     m_TableReference:
       m_TableCollectionName: GUID:be5a02b0a15989f4f8305fa29db8891c
@@ -3612,7 +3611,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Gameplay.Components.Interaction.InteractableComponent
   _isInteractable: 1
-  _oneShot: 0
+  _oneShot: 1
   _interactionEntry:
     m_TableReference:
       m_TableCollectionName: GUID:be5a02b0a15989f4f8305fa29db8891c
@@ -5672,57 +5671,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!1 &1604615737
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1604615738}
-  - component: {fileID: 1604615739}
-  m_Layer: 0
-  m_Name: PlayerDeathHandler
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1604615738
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1604615737}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 370737377}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1604615739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1604615737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 516ea71cd2ed17744ab1775c60878f96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Gameplay.Components.Handlers.PlayerDeathHandler
-  _health: {fileID: 0}
-  _onDied:
-    m_PersistentCalls:
-      m_Calls: []
-  _onRevived:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1640133729
 GameObject:
   m_ObjectHideFlags: 0
@@ -7238,9 +7186,49 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5398578661613666914, guid: aa5d9c36735d9314cb330c23cde9fbe6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398578661613666914, guid: aa5d9c36735d9314cb330c23cde9fbe6, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398578661613666914, guid: aa5d9c36735d9314cb330c23cde9fbe6, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398578661613666914, guid: aa5d9c36735d9314cb330c23cde9fbe6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398578661613666914, guid: aa5d9c36735d9314cb330c23cde9fbe6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5672885059914295847, guid: aa5d9c36735d9314cb330c23cde9fbe6, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -5.635601
+      objectReference: {fileID: 0}
+    - target: {fileID: 5798133897544910361, guid: aa5d9c36735d9314cb330c23cde9fbe6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5798133897544910361, guid: aa5d9c36735d9314cb330c23cde9fbe6, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5798133897544910361, guid: aa5d9c36735d9314cb330c23cde9fbe6, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5798133897544910361, guid: aa5d9c36735d9314cb330c23cde9fbe6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5798133897544910361, guid: aa5d9c36735d9314cb330c23cde9fbe6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5970743253627173440, guid: aa5d9c36735d9314cb330c23cde9fbe6, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -7703,6 +7691,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7880762272395603002, guid: 6429a1fe7c2379e4f82f24ccd2b2a8d4, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
