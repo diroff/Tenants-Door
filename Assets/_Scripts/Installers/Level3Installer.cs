@@ -8,14 +8,14 @@ namespace Installers
 {
     public class Level3Installer : BaseLevelInstaller
     {
-        [SerializeField] private BaseDoor _baseDoor;
+        [SerializeField] private ElevatorDoor _door;
         [SerializeField] private PowerSwitch _powerSwitch;
 
         protected override void InstallFeatureInstallers(ContainerBuilder containerBuilder)
         {
             base.InstallFeatureInstallers(containerBuilder);
 
-            containerBuilder.AddSingleton(_baseDoor, typeof(ILevelCompleter));
+            containerBuilder.AddSingleton(_door, typeof(ILevelCompleter));
             containerBuilder.AddSingleton(_powerSwitch);
         }
     }
