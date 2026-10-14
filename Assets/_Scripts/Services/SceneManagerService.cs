@@ -1,3 +1,4 @@
+using System;
 using Abstractions.Interfaces;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
@@ -8,10 +9,13 @@ namespace Services
     public class SceneManagerService : IService
     {
         private readonly string _menuSceneName;
+        private readonly LoadingScreenService _loadingScreenService;
+        private bool _isLoading;
 
-        public SceneManagerService(string menuSceneName)
+        public SceneManagerService(string menuSceneName, LoadingScreenService loadingScreenService)
         {
             _menuSceneName = menuSceneName;
+            _loadingScreenService = loadingScreenService;
         }
 
         public UniTask Initialize()
@@ -29,14 +33,41 @@ namespace Services
             SceneManager.LoadScene(index);
         }
 
-        public async UniTask LoadSceneAsync(string name)
+        public async UniTask LoadSceneAsync(string name, float fadeDuration = 1f)
         {
-            await SceneManager.LoadSceneAsync(name);
+            await LoadSceneInternalAsync(() => SceneManager.LoadSceneAsync(name), fadeDuration);
         }
 
-        public async UniTask LoadSceneAsync(int index)
+        public async UniTask LoadSceneAsync(int index, float fadeDuration = 1f)
         {
-            await SceneManager.LoadSceneAsync(index);
+            await LoadSceneInternalAsync(() => SceneManager.LoadSceneAsync(index), fadeDuration);
+        }
+
+        private async UniTask LoadSceneInternalAsync(Func<AsyncOperation> loadAction, float fadeDuration)
+        {
+            if (_isLoading) return;
+            _isLoading = true;
+
+            try
+            {
+                await _loadingScreenService.FadeInAsync(fadeDuration);
+
+                var loadOperation = loadAction();
+                loadOperation.allowSceneActivation = true;
+
+                while (!loadOperation.isDone)
+                {
+                    await UniTask.Yield();
+                }
+
+                await UniTask.Yield(PlayerLoopTiming.Update);
+
+                await _loadingScreenService.FadeOutAsync(fadeDuration);
+            }
+            finally
+            {
+                _isLoading = false;
+            }
         }
 
         public void LoadMenuScene()
@@ -44,9 +75,9 @@ namespace Services
             LoadScene(_menuSceneName);
         }
 
-        public UniTask LoadMenuSceneAsync()
+        public async UniTask LoadMenuSceneAsync(float fadeDuration = 1f)
         {
-            return LoadSceneAsync(_menuSceneName);
+            await LoadSceneAsync(_menuSceneName, fadeDuration);
         }
 
         public void ReloadScene()
@@ -54,9 +85,9 @@ namespace Services
             LoadScene(GetActiveScene());
         }
 
-        public async UniTask ReloadSceneAsync()
+        public async UniTask ReloadSceneAsync(float fadeDuration = 1f)
         {
-            await LoadSceneAsync(GetActiveScene());
+            await LoadSceneAsync(GetActiveScene(), fadeDuration);
         }
 
         private int GetActiveScene()
@@ -66,11 +97,11 @@ namespace Services
 
         public void QuitGame()
         {
-            #if UNITY_EDITOR
-                        UnityEditor.EditorApplication.isPlaying = false;
-            #else
-                        Application.Quit();
-            #endif
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#else
+            Application.Quit();
+#endif
         }
     }
 }

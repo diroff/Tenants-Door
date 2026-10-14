@@ -10,11 +10,20 @@ namespace Installers
     {
         [SerializeField] private string _menuSceneName;
         [SerializeField] private AudioMixer _audioMixer;
+        [SerializeField] private Material _tvNoiseMaterial;
+
+        [Header("Ambient Noise Settings")]
+        [SerializeField] private Vector2 _ambientNoiseRange = new Vector2(0.02f, 0.1f);
+        [SerializeField] private float _ambientNoiseSpeed = 1.5f;
 
         public void InstallBindings(ContainerBuilder builder)
         {
-            var sceneManager = new SceneManagerService(_menuSceneName);
+            var loadingScreenService = new LoadingScreenService(_tvNoiseMaterial, _ambientNoiseRange, _ambientNoiseSpeed);
+            builder.AddSingleton(loadingScreenService, typeof(IService), typeof(LoadingScreenService));
+
+            var sceneManager = new SceneManagerService(_menuSceneName, loadingScreenService);
             builder.AddSingleton(sceneManager, typeof(IService), typeof(SceneManagerService));
+
             builder.AddSingleton(typeof(InputService), typeof(IService), typeof(InputService));
 
             var dialogueService = new DialogueService();

@@ -253,6 +253,7 @@ GameObject:
   - component: {fileID: 2576983966265654347}
   - component: {fileID: 2744451398570169922}
   - component: {fileID: 502981180804978592}
+  - component: {fileID: 4107338297276548318}
   m_Layer: 5
   m_Name: UIHealthSliderView
   m_TagString: Untagged
@@ -348,7 +349,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Gameplay.Components.View.HealthSliderView
   Health: {fileID: 0}
   _slider: {fileID: 2744451398570169922}
+  _canvasGroup: {fileID: 4107338297276548318}
   _animationSpeed: 25
+  _fadeDuration: 0.35
+--- !u!225 &4107338297276548318
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2654071828367597516}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2715023445738328988
 GameObject:
   m_ObjectHideFlags: 0
