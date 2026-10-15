@@ -10,6 +10,7 @@ namespace Installers
     {
         [SerializeField] private string _menuSceneName;
         [SerializeField] private AudioMixer _audioMixer;
+        [SerializeField] private AudioMixerGroup _musicMixerGroup;
         [SerializeField] private Material _tvNoiseMaterial;
 
         [Header("Ambient Noise Settings")]
@@ -33,7 +34,10 @@ namespace Installers
             builder.AddSingleton(typeof(SaveLoadService), typeof(IService), typeof(SaveLoadService));
 
             builder.AddSingleton(_audioMixer, typeof(AudioMixer));
+            builder.AddSingleton(_musicMixerGroup, typeof(AudioMixerGroup));
+
             builder.AddSingleton(typeof(AudioSettingsService), typeof(IService), typeof(AudioSettingsService));
+            builder.AddSingleton(typeof(AudioMusicService), typeof(IService), typeof(AudioMusicService));
         }
     }
 }

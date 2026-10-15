@@ -45,7 +45,9 @@ namespace Services
 
         private async UniTask LoadSceneInternalAsync(Func<AsyncOperation> loadAction, float fadeDuration)
         {
-            if (_isLoading) return;
+            if (_isLoading) 
+                return;
+
             _isLoading = true;
 
             try

@@ -43,6 +43,12 @@ namespace Abstractions.UI
         {
             return UniTask.CompletedTask;
         }
-        protected void SetInteractable(bool value) => Button.interactable = value;
+        protected void SetInteractable(bool value)
+        {
+            if (Button == null)
+                return;
+
+            Button.interactable = value;
+        }
     }
 }

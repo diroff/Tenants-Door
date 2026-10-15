@@ -18,6 +18,8 @@ namespace UI.MainMenu
 
             var levelName = _saveLoadService.Data.Progress.LastReachedLevelName;
             await _sceneManager.LoadSceneAsync(levelName);
+
+            SetInteractable(true);
         }
     }
 }

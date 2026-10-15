@@ -18,6 +18,8 @@ namespace UI.MainMenu
 
             SetInteractable(false);
             await _sceneManager.LoadSceneAsync(_levelName);
+
+            SetInteractable(true);
         }
     }
 }
