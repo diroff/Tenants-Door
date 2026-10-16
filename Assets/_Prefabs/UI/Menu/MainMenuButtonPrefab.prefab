@@ -191,6 +191,8 @@ GameObject:
   - component: {fileID: 1223550051285002326}
   - component: {fileID: 2291436308620752970}
   - component: {fileID: 1556574837997409190}
+  - component: {fileID: 6919456612476537888}
+  - component: {fileID: 8258938787457696163}
   m_Layer: 5
   m_Name: MainMenuButtonPrefab
   m_TagString: Untagged
@@ -317,3 +319,27 @@ MonoBehaviour:
   _duration: 0.15
   _easeIn: 6
   _easeOut: 27
+--- !u!114 &6919456612476537888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8127356648467749574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6bac73d89c2fe3488a9bcf73cd6eabe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.AudioHandlers.UIConfirmAudioHandler
+--- !u!114 &8258938787457696163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8127356648467749574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f66857a2ce6c43145a46dd369e990a37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.AudioHandlers.UINavigationAudioHandler

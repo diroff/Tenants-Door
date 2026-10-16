@@ -2,6 +2,7 @@ using System.Threading;
 using Abstractions.Interfaces;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
+using Reflex.Attributes;
 using UnityEngine;
 
 namespace Services
@@ -11,6 +12,8 @@ namespace Services
         private readonly Material _tvNoiseMaterial;
         private readonly Vector2 _defaultNoiseRange;
         private readonly float _defaultNoiseSpeed;
+
+        [Inject] private AudioEffectsService _audioEffectsService;
 
         private CancellationTokenSource _ambientNoiseCancellationTokenSource;
         private static readonly int IntensityProperty = Shader.PropertyToID("_Intensity");
@@ -35,7 +38,10 @@ namespace Services
 
         public async UniTask FadeInAsync(float duration = 0.5f)
         {
+            _audioEffectsService?.PlayTvNoise();
+
             StopAmbientNoiseFluctuation();
+
             if (_tvNoiseMaterial != null)
             {
                 await _tvNoiseMaterial.DOFloat(1f, IntensityProperty, duration)

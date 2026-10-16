@@ -12,6 +12,8 @@ namespace Gameplay.Components.Handlers
         [SerializeField] private CanvasGroup _canvasGroup;
 
         [Inject] private SceneManagerService _sceneManagerService;
+        [Inject] private AudioEffectsService _audioEffectsService;
+
         private bool _isExiting;
 
         private void OnEnable()
@@ -54,6 +56,7 @@ namespace Gameplay.Components.Handlers
 
             _isExiting = true;
 
+            _audioEffectsService.PlayUICancel();
             LoadMenuAsync().Forget();
         }
 

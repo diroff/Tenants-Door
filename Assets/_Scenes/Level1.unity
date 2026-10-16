@@ -260,6 +260,7 @@ GameObject:
   m_Component:
   - component: {fileID: 135485327}
   - component: {fileID: 135485328}
+  - component: {fileID: 135485329}
   m_Layer: 0
   m_Name: DialogueProcessHandler
   m_TagString: Untagged
@@ -294,6 +295,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 281be28ee4b01d245a8d3af3d66e1095, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Gameplay.Components.Handlers.DialogueStartHandler
+--- !u!114 &135485329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135485326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ae8dcab7da47254b939215f513f2343, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Gameplay.Components.Handlers.DialogueNodesHandler
 --- !u!1 &153489237
 GameObject:
   m_ObjectHideFlags: 0

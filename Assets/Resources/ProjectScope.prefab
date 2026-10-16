@@ -59,7 +59,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Installers.ProjectInstaller
   _menuSceneName: _MainMenu
   _audioMixer: {fileID: 24100000, guid: 1b6a3b93e99473846b8d59ec4d58ceb5, type: 2}
-  _tvNoiseMaterial: {fileID: 2100000, guid: 1988e041162ae184d8e2b8eb474b6f5c, type: 2}
   _musicMixerGroup: {fileID: 8736235034804880799, guid: 1b6a3b93e99473846b8d59ec4d58ceb5, type: 2}
+  _tvNoiseMaterial: {fileID: 2100000, guid: 1988e041162ae184d8e2b8eb474b6f5c, type: 2}
+  _audioEffectsServicePrefab: {fileID: 3222516087025173363, guid: 0a250a783935b7e4b8a013a46ec3b940, type: 3}
   _ambientNoiseRange: {x: 0, y: 0.05}
   _ambientNoiseSpeed: 0.05

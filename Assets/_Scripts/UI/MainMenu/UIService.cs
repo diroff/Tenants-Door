@@ -15,6 +15,7 @@ namespace UI
         [SerializeField] private UIPanel _initialPanel;
 
         [Inject] private InputService _input;
+        [Inject] private AudioEffectsService _audioEffectsService;
 
         private readonly Stack<UIPanel> _history = new();
         private bool _isTransitioning;
@@ -92,6 +93,7 @@ namespace UI
 
             _isTransitioning = true;
             EventSystem.current?.SetSelectedGameObject(null);
+            _audioEffectsService.PlayUICancel();
 
             var currentPanel = _history.Pop();
             await currentPanel.HideAsync(_cts.Token);
