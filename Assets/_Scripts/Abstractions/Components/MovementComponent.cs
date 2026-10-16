@@ -18,7 +18,7 @@ namespace Abstractions.Components
 
         protected Vector3 DesiredDirection;
         protected Vector3 CurrentDirection;
-        protected bool IsMoving;
+        public bool IsMoving;
 
         public bool CanMove { get; protected set; }
 

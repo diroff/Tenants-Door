@@ -142,7 +142,7 @@ namespace Abstractions.Components
 
         protected void InvokeJumpStarted() => JumpStarted?.Invoke();
 
-        protected bool IsGrounded()
+        public bool IsGrounded()
         {
             Vector2 origin = (Vector2)transform.position + _groundCheckOffset;
             return Physics2D.OverlapBox(origin, _groundCheckSize, 0f, _groundMask);

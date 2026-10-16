@@ -5,7 +5,6 @@ using UnityEngine;
 
 namespace Gameplay.Components.Audio
 {
-    [RequireComponent(typeof(AudioSource))]
     public class AudioPlayer : MonoBehaviour
     {
         [SerializeField] private AudioSource _source;
