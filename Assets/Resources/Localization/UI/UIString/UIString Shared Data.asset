@@ -59,6 +59,22 @@ MonoBehaviour:
     m_Key: ui.main_menu.buttons.no
     m_Metadata:
       m_Items: []
+  - m_Id: 28455987337994240
+    m_Key: ui.main_menu.buttons.music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28456029943734272
+    m_Key: ui.main_menu.buttons.sounds
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28457105732378624
+    m_Key: ui.main_menu.buttons.language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28464317745831936
+    m_Key: ui.main_menu.buttons.volume
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

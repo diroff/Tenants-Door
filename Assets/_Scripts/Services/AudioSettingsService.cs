@@ -13,11 +13,13 @@ namespace Services
         private const string MusicParam = "Music";
         private const string SfxParam = "SFX";
 
+        public float MusicVolume => _saveLoadService.Data.Settings.MusicVolume;
+        public float SfxVolume => _saveLoadService.Data.Settings.SfxVolume;
+
         public AudioSettingsService(AudioMixer audioMixer, SaveLoadService saveLoadService)
         {
             _audioMixer = audioMixer;
             _saveLoadService = saveLoadService;
-
         }
 
         public async UniTask Initialize()
@@ -25,6 +27,8 @@ namespace Services
             await UniTask.WaitForEndOfFrame();
 
             ApplySavedSettings();
+
+            await UniTask.WaitForEndOfFrame();
         }
 
         public void SetMusicVolume(float volume)

@@ -2,7 +2,6 @@ using Abstractions.Interfaces;
 using Cysharp.Threading.Tasks;
 using Gameplay.Components.Audio;
 using UnityEngine;
-using UnityEngine.Audio;
 
 namespace Services
 {
@@ -40,7 +39,7 @@ namespace Services
 
         public void PlayTvNoise()
         {
-            _tvNoicePlayer?.PlayOneShot();  
+            _tvNoicePlayer?.PlayOneShot();
         }
     }
 }
