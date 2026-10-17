@@ -1,4 +1,5 @@
 using DG.Tweening;
+using Gameplay.Components.Audio;
 using UnityEngine;
 
 namespace Gameplay.Components.Interaction.Doors.Views
@@ -7,6 +8,7 @@ namespace Gameplay.Components.Interaction.Doors.Views
     {
         [Header("Door Target")]
         [SerializeField] private BaseDoor _door;
+        [SerializeField] private AudioPlayer _audioPlayer;
 
         [Header("Animation Settings")]
         [SerializeField] private Transform _doorPivot;
@@ -36,6 +38,7 @@ namespace Gameplay.Components.Interaction.Doors.Views
         protected virtual void HandleOpeningStarted()
         {
             AnimateOpening();
+            _audioPlayer?.PlayOneShot();
         }
 
         protected virtual void AnimateOpening()

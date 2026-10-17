@@ -25,6 +25,12 @@ namespace Gameplay.Components.Audio
                 _source = GetComponent<AudioSource>();
         }
 
+        private void Start()
+        {
+            if (_source.outputAudioMixerGroup == null)
+                Debug.LogError("No mixer group!");
+        }
+
         private void Reset()
         {
             _source = GetComponent<AudioSource>();
