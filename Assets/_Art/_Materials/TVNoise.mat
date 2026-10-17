@@ -43,7 +43,7 @@ Material:
     m_Floats:
     - _BlendMode: 1
     - _EnableExternalAlpha: 0
-    - _Intensity: 0.014233378
+    - _Intensity: 0.020186782
     - _NoiseSpeed: 10
     - _ZWrite: 0
     m_Colors:

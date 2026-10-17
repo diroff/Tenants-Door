@@ -23,7 +23,8 @@ namespace Gameplay.Mechanics.Interactables
         [SerializeField] private float _bookEndDelay = 0.25f;
         [SerializeField] private Ease _bookScaleEase = Ease.OutBack;
 
-        [Header("On animation completed")]
+        [Header("Events")]
+        [SerializeField] private UnityEvent _onAnimationStarted;
         [SerializeField] private UnityEvent _onAnimationCompleted;
 
         [Inject] private InputService _input;
@@ -63,6 +64,7 @@ namespace Gameplay.Mechanics.Interactables
                     .DOScale(_originalBookScale, _bookScaleDuration)
                     .SetEase(_bookScaleEase))
                 .AppendInterval(_bookEndDelay)
+                .AppendCallback(() => _onAnimationStarted?.Invoke())
                 .Append(_shelfTransform
                     .DOMove(_targetPosition, _moveDuration)
                     .SetEase(_moveEase));
