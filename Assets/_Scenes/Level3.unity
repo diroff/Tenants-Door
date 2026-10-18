@@ -978,6 +978,52 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &79308959
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 79308960}
+  - component: {fileID: 79308961}
+  m_Layer: 0
+  m_Name: PlayerHitsHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &79308960
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79308959}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 370737377}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &79308961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79308959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 168ce37d8da55484695af3fa5afb2e0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Gameplay.Mechanics.Player.PlayerHitsHandler
+  _cameraShake: {fileID: 519420033}
+  _spriteFlash: {fileID: 142285396014752153}
 --- !u!224 &79458853 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2978471529804066728, guid: 6429a1fe7c2379e4f82f24ccd2b2a8d4, type: 3}
@@ -7195,6 +7241,7 @@ Transform:
   m_Children:
   - {fileID: 545768713}
   - {fileID: 1604615738}
+  - {fileID: 79308960}
   m_Father: {fileID: 603634901}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &371759937
@@ -8483,6 +8530,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -8608,6 +8656,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1534481624}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52e4537a810f7d742b2a49b1e915d341, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Gameplay.Components.Effects.CameraShake
+  _target: {fileID: 519420032}
+  _defaultDuration: 0.25
+  _defaultStrength: 0.15
+  _defaultVibrato: 15
 --- !u!1 &521105287
 GameObject:
   m_ObjectHideFlags: 0
@@ -24379,6 +24443,7 @@ MonoBehaviour:
   _onRevived:
     m_PersistentCalls:
       m_Calls: []
+  _targetRotation: {x: 0, y: 0, z: 90}
 --- !u!1 &1629250693
 GameObject:
   m_ObjectHideFlags: 0
@@ -28847,6 +28912,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4585034992532743871, guid: bbf97ccd96404334aa7ad2c51610f4c9, type: 3}
   m_PrefabInstance: {fileID: 142285396014752150}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &142285396014752153 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3980080287736808848, guid: bbf97ccd96404334aa7ad2c51610f4c9, type: 3}
+  m_PrefabInstance: {fileID: 142285396014752150}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8793b0e7c4dd0a4db693909a97f2e4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Gameplay.Components.Effects.SpriteFlash
 --- !u!1001 &4697155828948782868
 PrefabInstance:
   m_ObjectHideFlags: 0
