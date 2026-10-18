@@ -1,5 +1,6 @@
 using Abstractions.Components.Inventory;
 using Data;
+using Gameplay.Components.Audio;
 using Gameplay.Mechanics.Interactables;
 using Reflex.Attributes;
 using UnityEngine;
@@ -12,6 +13,7 @@ namespace Gameplay.Mechanics.Player
         [SerializeField] private Light2D _light;
         [SerializeField] private InventoryComponent _inventory;
         [SerializeField] private ItemDefinition _flashlightData;
+        [SerializeField] private AudioPlayer _audioPlayer;
 
         [Inject] private PowerSwitch _powerSwitch;
 
@@ -36,6 +38,7 @@ namespace Gameplay.Mechanics.Player
                 return;
             }
 
+            _audioPlayer.PlayOneShot();
             _light.gameObject.SetActive(!isEnabled);
         }
 

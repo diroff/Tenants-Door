@@ -40,7 +40,7 @@ Shader "Sprites/Lit-Outline"
             HLSLPROGRAM
             #pragma vertex Vertex
             #pragma fragment Fragment
-            #pragma shader_feature_local _OUTLINE_ON
+            #pragma multi_compile_local _ _OUTLINE_ON
 
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
 

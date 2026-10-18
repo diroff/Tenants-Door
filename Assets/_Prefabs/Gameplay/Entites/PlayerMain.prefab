@@ -1095,6 +1095,7 @@ GameObject:
   - component: {fileID: 4459053529541691396}
   - component: {fileID: 7770112076957678495}
   - component: {fileID: 1492159687811220782}
+  - component: {fileID: 3980080287736808848}
   m_Layer: 0
   m_Name: View
   m_TagString: Untagged
@@ -1216,6 +1217,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3980080287736808848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5661555755209085087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8793b0e7c4dd0a4db693909a97f2e4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Gameplay.Components.Effects.SpriteFlash
+  _spriteRenderer: {fileID: 7770112076957678495}
+  _defaultDuration: 0.2
+  _defaultStrength: 1
 --- !u!1 &7942849586096638596
 GameObject:
   m_ObjectHideFlags: 0

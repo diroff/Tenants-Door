@@ -19,6 +19,14 @@ namespace Gameplay.Components.Audio
                 StartLoop();
         }
 
+        public void SetPlayingState(bool active)
+        {
+            if (active)
+                StartLoop();
+            else
+                StopLoop();
+        }
+
         public void StartLoop()
         {
             if (_loopCancellationSource != null || !HasClips)
