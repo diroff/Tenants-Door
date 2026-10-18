@@ -26,6 +26,10 @@ MonoBehaviour:
     m_Localized: Speaker
     m_Metadata:
       m_Items: []
+  - m_Id: 10197815729037312
+    m_Localized: Voice
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
