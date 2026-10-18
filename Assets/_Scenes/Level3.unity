@@ -9608,6 +9608,8 @@ GameObject:
   - component: {fileID: 546369719}
   - component: {fileID: 546369718}
   - component: {fileID: 546369720}
+  - component: {fileID: 546369722}
+  - component: {fileID: 546369721}
   m_Layer: 0
   m_Name: ElevatorButton
   m_TagString: Untagged
@@ -9727,6 +9729,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 546369722}
+        m_TargetAssemblyTypeName: Gameplay.Components.Audio.AudioPlayer, Assembly-CSharp
+        m_MethodName: PlayOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _isLocked: 1
   _requiredKey: {fileID: 0}
   _consumeKeyOnUnlock: 0
@@ -9736,6 +9750,18 @@ MonoBehaviour:
       - m_Target: {fileID: 392404425}
         m_TargetAssemblyTypeName: Gameplay.Components.DialogueComponent, Assembly-CSharp
         m_MethodName: StartDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 546369722}
+        m_TargetAssemblyTypeName: Gameplay.Components.Audio.AudioPlayer, Assembly-CSharp
+        m_MethodName: PlayOneShot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9800,6 +9826,122 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.65, y: 0.65}
   m_EdgeRadius: 0
+--- !u!82 &546369721
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546369716}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -2625841366127277979, guid: 1b6a3b93e99473846b8d59ec4d58ceb5, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &546369722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546369716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 734c9f2870817c54ea0fdad87323e6cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Gameplay.Components.Audio.AudioPlayer
+  _source: {fileID: 546369721}
+  _clips:
+  - {fileID: 8300000, guid: 9710432fe3f97ea4fa6d15db32bd7aff, type: 3}
+  - {fileID: 8300000, guid: 4b9ac6c94c489f1479e210aeabd3f754, type: 3}
+  _randomClip: 0
+  _randomPitch: 1
+  _pitchRange: {x: 0.95, y: 1.05}
 --- !u!1 &556397710
 GameObject:
   m_ObjectHideFlags: 0
@@ -10318,6 +10460,7 @@ GameObject:
   - component: {fileID: 588955257}
   - component: {fileID: 588955259}
   - component: {fileID: 588955258}
+  - component: {fileID: 588955260}
   m_Layer: 0
   m_Name: Valve
   m_TagString: Untagged
@@ -10452,6 +10595,19 @@ MonoBehaviour:
       - m_Target: {fileID: 588955259}
         m_TargetAssemblyTypeName: Gameplay.Components.Audio.AudioPlayer, Assembly-CSharp
         m_MethodName: PlayOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 588955260}
+        m_TargetAssemblyTypeName: Gameplay.Components.Animations.RotationLoopAnimation,
+          Assembly-CSharp
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10615,6 +10771,26 @@ MonoBehaviour:
   _randomClip: 0
   _randomPitch: 0
   _pitchRange: {x: 0.95, y: 1.05}
+--- !u!114 &588955260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588955253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2744b7cadc462ab4eba7ad08371e6f4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Gameplay.Components.Animations.RotationLoopAnimation
+  _target: {fileID: 588955254}
+  _playOnAwake: 0
+  _rotationPerLoop: {x: 0, y: 0, z: -90}
+  _duration: 1
+  _ease: 4
+  _rotateMode: 3
+  _loopType: 2
+  _loops: 0
 --- !u!1 &596904258
 GameObject:
   m_ObjectHideFlags: 0
@@ -27939,7 +28115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d5e78c3a6ffd4048ae8de9e2634946e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Gameplay.Components.Level.LevelMusic
-  _musicClip: {fileID: 8300000, guid: 8fb3310e0aef39c40b2a9e9162416fbb, type: 3}
+  _musicClip: {fileID: 8300000, guid: bd67bd4f0bf3d584db3919a334d83a2b, type: 3}
 --- !u!1 &2011248453
 GameObject:
   m_ObjectHideFlags: 0
