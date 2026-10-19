@@ -287,8 +287,16 @@ MonoBehaviour:
     m_Localized: Sau____es... B__r Bal____a... Disc____ 10%...
     m_Metadata:
       m_Items: []
-  - m_Id: 6409650576793622
-    m_Localized: Total gibberish...
+  - m_Id: 10195190010847232
+    m_Localized: Use the arrow keys to move...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10195190040207360
+    m_Localized: Press Space to jump...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10195190040207361
+    m_Localized: Press E to interact with the environment...
     m_Metadata:
       m_Items: []
   references:

@@ -33,6 +33,36 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
+  - _speaker: {fileID: 11400000, guid: 210f188915a860c45af202678889fa6e, type: 2}
+    _text:
+      m_TableReference:
+        m_TableCollectionName: GUID:8f34fbc1f8cd89348a9c5412e032b325
+      m_TableEntryReference:
+        m_KeyId: 10195190010847232
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - _speaker: {fileID: 11400000, guid: 210f188915a860c45af202678889fa6e, type: 2}
+    _text:
+      m_TableReference:
+        m_TableCollectionName: GUID:8f34fbc1f8cd89348a9c5412e032b325
+      m_TableEntryReference:
+        m_KeyId: 10195190040207360
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - _speaker: {fileID: 11400000, guid: 210f188915a860c45af202678889fa6e, type: 2}
+    _text:
+      m_TableReference:
+        m_TableCollectionName: GUID:8f34fbc1f8cd89348a9c5412e032b325
+      m_TableEntryReference:
+        m_KeyId: 10195190040207361
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   references:
     version: 2
     RefIds: []

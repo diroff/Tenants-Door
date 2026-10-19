@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1ddf18e0f0f2f3b4882806db665e945c, type: 3}
-  m_Name: SpeakerCharacter
+  m_Name: VoiceCharacter
   m_EditorClassIdentifier: Assembly-CSharp::Data.Dialogue.DialogueCharacterSO
-  <Id>k__BackingField: Speaker
+  <Id>k__BackingField: Voice
   <Name>k__BackingField:
     m_TableReference:
       m_TableCollectionName: GUID:d56a05b46bbfd954fb4866b466810e31
     m_TableEntryReference:
-      m_KeyId: 430453268480
+      m_KeyId: 10197815729037312
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  <Portrait>k__BackingField: {fileID: 21300000, guid: a8166ea434d337349818825bff42d2f6, type: 3}
+  <Portrait>k__BackingField: {fileID: 21300000, guid: 4d721667e70ae0a4ca44e939419a7c8e, type: 3}
   references:
     version: 2
     RefIds: []

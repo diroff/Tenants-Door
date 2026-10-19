@@ -263,8 +263,16 @@ MonoBehaviour:
     m_Key: Lvl3_trash_note_1
     m_Metadata:
       m_Items: []
-  - m_Id: 6409650576793622
-    m_Key: Lvl3_trash_note_2
+  - m_Id: 10195190010847232
+    m_Key: Tutorial_keys_0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10195190040207360
+    m_Key: Tutorial_keys_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10195190040207361
+    m_Key: Tutorial_keys_2
     m_Metadata:
       m_Items: []
   m_Metadata:
